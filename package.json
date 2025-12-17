@@ -25,17 +25,16 @@
       "dist/**/*",
       "package.json"
     ],
-    "extraMetadata": {
-      "main": "dist/main.js"
-    },
     "asar": true,
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+      "icon": "build/logo/icon.png"
     },
     "linux": {
       "target": [
         "AppImage"
-      ]
+      ],
+      "icon": "build/logo/icon.png"
     }
   },
   "dependencies": {

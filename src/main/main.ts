@@ -6,6 +6,9 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 1000,
     height: 800,
+    icon: app.isPackaged
+      ? path.join(process.resourcesPath, "logo", "icon.ico")
+      : path.join(__dirname, "../build/logo/icon.ico"),
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,
